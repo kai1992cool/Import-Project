@@ -1,8 +1,9 @@
 import {Routes} from '@angular/router';
-import {UiComponent} from "../ui/ui.component";
-import {AdminComponent} from "../admin/admin.component";
+import {HomeComponent} from "./home/home.component";
+import {AdminComponent} from "./admin/admin.component";
 
 export const routes: Routes = [
-  {path: '', component: UiComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'home', title: 'Home', component: HomeComponent},
+  {path: 'admin', title: 'Admin', component: AdminComponent},
+  {path: '**', redirectTo: 'home'},
 ];
